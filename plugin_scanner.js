@@ -14,6 +14,10 @@
 autowatch = 1;
 outlets   = 2;
 
+// Runs immediately on load — proves JS is alive
+post("plugin_scanner.js loaded OK\n");
+outlet(1, "set", "JS loaded. Press Scan Project.");
+
 var addTagsEnabled = 0;
 var currentFilter  = "ALL";
 var allResults     = [];
